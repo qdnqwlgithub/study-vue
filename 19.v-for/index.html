@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+		<p>遍历数组</p>
+		<ul>
+			<li v-for="(n,index) in name" :key="n">{{index+1}}-{{n}}</li>
+		</ul>
+		<p>遍历对象</p>
+		<ul>
+			<li v-for="(v,k) in singer" :key="k">{{k}}:{{v}}</li>
+		</ul>
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`,
+			name:[`a`,`b`,`c`,`d`],
+			singer:{
+				id:0,
+				name:`ada`,
+				song:`再见只是陌生人`,
+				age:27,
+				gender:`girl`
+			}
+        }
+    });
+</script>
+</html>
