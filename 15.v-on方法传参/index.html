@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+		<!-- v-on语法糖:@ -->
+		<button type="button" @click="test">testv-on语法糖:@</button>
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`
+        },
+		methods:{
+			test(){
+				console.info(`v-on语法糖测试成功!`);
+			}
+		}
+    });
+</script>
+</html>
