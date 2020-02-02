@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+		<button type="button" @click="changeLoginMode">切换登陆方式</button>
+		<div id="userNameLoginModeDiv" v-if="loginMode.userName">
+			<input type="" name="" id="" value="用户名登陆" key="userNameLoginModeDiv" />
+		</div>
+		<div id="eMailLoginModeDiv" v-if="loginMode.eMail">
+			<input type="" name="" id="" value="邮箱登陆" key="eMailLoginModeDiv" />
+		</div>
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`,
+			loginMode:{
+				userName:true,
+				eMail:false
+			}
+        },
+		methods:{
+			changeLoginMode(){
+				this.loginMode.userName=!this.loginMode.userName;
+				this.loginMode.eMail=!this.loginMode.eMail;
+				console.info(this.loginMode);
+			}
+		}
+    });
+</script>
+</html>
