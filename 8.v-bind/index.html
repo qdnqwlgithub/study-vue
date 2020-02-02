@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- v-bind作用:动态绑定属性 -->
+    <div id="app">
+        <button></button>
+        <img v-bind:src="data[0].src" v-bind:alt="data[0].alt" v-bind:width="data[0].width">
+        <img v-bind:src="data[1].src" v-bind:alt="data[1].alt" v-bind:width="data[1].width">
+        <!-- 语法糖写法 在属性前面写个:跟写v-bind:等效 -->
+        <img :src="data[2].src" :alt="data[2].alt" :width="data[2].width">
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`,
+            data:[
+                {src:`picture/82059686gy1gajbb33up8j20u0140b29.jpg`,width:`500px`,alt:`ada`},
+                {src:`picture/82059686gy1gay1v09x76j20u01hcgpk.jpg`,width:`500px`,alt:`ada`},
+                {src:`picture/82059686gy1gb58dl64r6j23404o0npn (1).jpg`,width:`500px`,alt:`ada`}
+            ]
+        },
+        
+    });
+</script>
+</html>
