@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>1.列表展示数据</title>
+    </script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="singer in data">{{singer}}</li>
+        </ul>
+    </div>
+
+
+    <script src="../js/vue.js"></script>
+    <script type="text/javascript">
+        const app = new Vue({
+            el: `#app`,
+            data: {
+                message: `I am message`,
+                data:[`庄心妍`,`冯提莫`,`周思涵`,`林忆莲`,`许嵩`]
+            }
+        });
+    </script>
+</body>
+
+</html>
