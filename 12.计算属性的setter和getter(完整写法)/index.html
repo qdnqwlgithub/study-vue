@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<script src="../js/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{totalBookPrice}}
+		</div>
+	</body>
+	<script>
+		const app = new Vue({
+			el: `#app`,
+			data: {
+				message: `I am message`,
+				books:[
+					{id:0,name:`我的奋斗`,price:119},
+					{id:1,name:`你的奋斗`,price:220},
+					{id:2,name:`他的奋斗`,price:50},
+					{id:3,name:`她的奋斗`,price:30},
+					{id:4,name:`它的奋斗`,price:5}
+				]
+			},
+			methods: {
+
+			},
+			computed: {
+				// 计算属性推荐用computed而不用methods,因为methods是要调用才能显示值,显示一次调用一次
+				// 而computed是根据值的变化而调用,调用完就等于属性
+				totalBookPrice:function(){
+					set:function(){
+						
+					},
+					get:function(){
+						
+					}
+				}
+			}
+		});
+	</script>
+</html>
