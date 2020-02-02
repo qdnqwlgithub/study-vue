@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app" v-cloak>
+        {{message}}
+    </div>
+</body>
+<script>
+    window.setTimeout(() => {
+        const app = new Vue({
+            el: `#app`,
+            data: {
+                message: `I am message`
+            }
+        });
+    }, 1000);
+
+</script>
+
+</html>
