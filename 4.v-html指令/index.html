@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-html="url"></span>
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`,
+            url:` <a href="www.baidu.com">百度一下</a>`
+        }
+    });
+</script>
+</html>
