@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9.v-bind和v-for练习</title>
+    <script src="../js/vue.js"></script>
+	<style type="text/css">
+		.myStyle{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+        	<li v-for="(s,index) in star" :key="s" :class="{'myStyle':myBoolean===index}" @click="changeRed(index)">{{s}}</li>
+        </ul>
+    </div>
+</body>
+<script>
+    const app=new Vue({
+        el:`#app`,
+        data:{
+            message:`I am message`,
+            star:[`许冠文`,`许冠武`,`许冠英`,`许冠杰`],
+			myBoolean:null
+        },
+        methods:{
+			changeRed(index){
+				this.myBoolean=index;
+			}
+		},
+		components:{
+
+		}
+    });
+</script>
+</html>
